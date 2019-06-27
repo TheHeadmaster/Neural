@@ -9,5 +9,6 @@ namespace Neural.Abstraction
     /// </summary>
     public abstract class Element
     {
+        public string TagName { get; set; }
     }
 }
