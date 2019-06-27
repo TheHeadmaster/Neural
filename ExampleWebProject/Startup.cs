@@ -1,14 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Neural;
 
 namespace ExampleWebProject
 {
@@ -42,6 +36,11 @@ namespace ExampleWebProject
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseNeural();
+
+            // Use this method if you wish to register additional assemblies for element and view discovery. You do not need to register the executing assembly, it is done for you.
+            // app.RegisterNeuralAssembly(someExternalLibrary);
         }
     }
 }
